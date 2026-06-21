@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDAH — Cuidados Essenciais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="login-screen">
+    <div id="login-box">
+      <h1>Login</h1>
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+      <p class="muted">Não tem uma conta?</p>
+      <button class="secondary" onclick="showRegister()">Criar acesso</button>
+    </div>
+
+    <div id="register-box" style="display:none;">
+      <h1>Criar Acesso</h1>
+      <input type="text" id="new-username" placeholder="Novo usuário">
+      <input type="password" id="new-password" placeholder="Nova senha">
+      <button onclick="register()">Cadastrar</button>
+      <button class="secondary" onclick="showLogin()">Voltar ao login</button>
+    </div>
+  </div>
+
+  <div id="app" style="display:none;">
+    <header>
+      <h1>TDAH — Cuidados Essenciais</h1>
+      <nav class="menu">
+        <button onclick="showSection('o-que-e')">O que é</button>
+        <button onclick="showSection('rotina')">Rotina</button>
+        <button onclick="showSection('familia')">Família</button>
+        <button onclick="showSection('jogos')">Jogos</button>
+        <button onclick="showSection('atividades')">Atividades</button>
+        <button onclick="showSection('tecnologia')">Tecnologia</button>
+        <button onclick="showSection('educadores')">Educadores</button>
+        <button onclick="showSection('tratamentos')">Tratamentos</button>
+        <button onclick="showSection('alimentacao')">Alimentação</button>
+        <button onclick="showSection('escola')">Escola</button>
+        <button onclick="showSection('direitos')">Direitos</button>
+      </nav>
+    </header>
+
+    <main id="o-que-e" class="active">
+      <div class="card">
+        <h2>O que é TDAH?</h2>
+        <p>O TDAH é uma condição neurobiológica que interfere na capacidade de manter atenção, controlar impulsos e regular níveis de atividade. Ele não é causado por falta de disciplina ou esforço.</p>
+        <h3>Sintomas principais:</h3>
+        <ul>
+          <li><strong>Desatenção:</strong> dificuldade em focar, seguir instruções, terminar tarefas.</li>
+          <li><strong>Hiperatividade:</strong> inquietação, excesso de movimento, dificuldade em relaxar.</li>
+          <li><strong>Impulsividade:</strong> agir sem pensar, interromper conversas, dificuldade em esperar.</li>
+        </ul>
+
+        <h3>Fatores associados:</h3>
+        <ul>
+          <li>Questões genéticas e hereditárias.</li>
+          <li>Alterações em neurotransmissores como dopamina.</li>
+          <li>Ambiente familiar e escolar podem influenciar, mas não causar.</li>
+        </ul>
+      </div>
+    </main>
+
+    <main id="rotina">
+      <h2>Estabelecendo Rotinas</h2>
+      <p class="muted" style="margin-bottom: 15px;">Dicas práticas para estabelecer rotinas eficazes</p>
+      
+      <div class="grid-2">
+        <div class="card">
+          <span class="badge high">Alta</span>
+          <h3>Horários Consistentes</h3>
+          <p>Mantenha horários regulares para acordar, fazer refeições, estudar e dormir. A previsibilidade ajuda a reduzir a ansiedade.</p>
+        </div>
+        <div class="card">
+          <span class="badge high">Alta</span>
+          <h3>Uso de Lembretes Visuais</h3>
+          <p>Utilize quadros, calendários coloridos e aplicativos de lembretes para ajudar a lembrar das tarefas diárias.</p>
+        </div>
+        <div class="card">
+          <span class="badge medium">Média</span>
+          <h3>Divisão de Tarefas</h3>
+          <p>Quebre tarefas grandes em passos menores e mais gerenciáveis. Celebre cada pequena conquista.</p>
+        </div>
+        <div class="card">
+          <span class="badge medium">Média</span>
+          <h3>Tempo de Transição</h3>
+          <p>Permita tempo extra entre atividades para ajudar na transição e reduzir o estresse.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Estratégias adicionais:</h3>
+        <ul>
+          <li>Criar checklist visual com imagens.</li>
+          <li>Usar cronômetros visuais (Time Timer).</li>
+          <li>Planejar transições com avisos antecipados.</li>
+        </ul>
+      </div>
+    </main>
+
+    <main id="familia">
+      <div class="card">
+        <h2>O Papel da Família (Apoio Familiar)</h2>
+        <p class="muted">Orientações para familiares e cuidadores</p>
+        
+        <h3>Comunicação Positiva</h3>
+        <p>Pratique a escuta ativa e use reforços positivos para incentivar comportamentos construtivos no ambiente familiar.</p>
+        
+        <h3>Paciência e Compreensão</h3>
+        <p>Lembre-se de que cada processo de aprendizado tem seu próprio tempo. O suporte emocional paciente faz toda a diferença.</p>
+
+        <h3>Estabeleça Limites Claros</h3>
+        <p>Definir regras claras e consistentes ajuda a criar um ambiente seguro e previsível para todos.</p>
+
+        <h3>Autocuidado dos Cuidadores</h3>
+        <p>Para cuidar de alguém, você também precisa estar bem. Reserve momentos para o seu próprio descanso e bem-estar.</p>
+
+        <h3 style="margin-top: 25px;">Como ajudar no dia a dia:</h3>
+        <ul>
+          <li>Evitar críticas excessivas.</li>
+          <li>Valorizar cada conquista.</li>
+          <li>Trabalhar com reforço positivo.</li>
+        </ul>
+      </div>
+    </main>
+
+    <main id="jogos">
+      <div class="card">
+        <h2>Jogos Recomendados</h2>
+        <p class="muted">Jogos que ajudam no desenvolvimento</p>
+        <p>Jogos ajudam a desenvolver raciocínio lógico, concentração, memória de trabalho e autocontrole.</p>
+        
+        <h3>Jogos de Memória</h3>
+        <p><strong>Benefícios:</strong> Melhoram a concentração, memória de trabalho e atenção aos detalhes.</p>
+        <p class="muted">Exemplos: Jogo da memória tradicional, Simon, aplicativos de memória.</p>
+
+        <h3>Quebra-Cabeças</h3>
+        <p><strong>Benefícios:</strong> Desenvolvem o planejamento, resolução de problemas e persistência.</p>
+        <p class="muted">Exemplos: Puzzles de 50-500 peças, tangram, cubo mágico.</p>
+
+        <h3>Jogos de Tabuleiro</h3>
+        <p><strong>Benefícios:</strong> Ensinam a esperar a vez, seguir regras e trabalhar em equipe.</p>
+        <p class="muted">Exemplos: Uno, Damas, Xadrez, Banco Imobiliário.</p>
+
+        <h3>Atividades Físicas</h3>
+        <p><strong>Benefícios:</strong> Liberam energia, melhoram o foco e regulam o humor.</p>
+        <p class="muted">Exemplos: Futebol, natação, artes marciais, dança.</p>
+      </div>
+    </main>
+
+    <main id="atividades">
+      <div class="card">
+        <h2>Atividades Benéficas</h2>
+        <p class="muted">Atividades recomendadas para diferentes áreas</p>
+        <p>A atividade física regular aumenta a dopamina e melhora foco, humor e qualidade do sono.</p>
+        
+        <h3>Atividades Físicas</h3>
+        <ul>
+          <li><strong>Natação:</strong> excelente para liberar energia</li>
+          <li><strong>Artes marciais:</strong> ajudam na disciplina e autocontrole</li>
+          <li><strong>Yoga infantil:</strong> consciência corporal e relaxamento</li>
+          <li><strong>Corrida ou ciclismo:</strong> exercício aeróbico</li>
+          <li>Esportes com regras curtas (futebol, queimada).</li>
+        </ul>
+
+        <h3>Atividades Artísticas</h3>
+        <ul>
+          <li><strong>Pintura e desenho:</strong> expressão criativa</li>
+          <li><strong>Música:</strong> tocar instrumentos ou cantar</li>
+          <li><strong>Teatro:</strong> desenvolvimento social e expressão</li>
+          <li><strong>Artesanato:</strong> coordenação motora fina</li>
+        </ul>
+
+        <h3>Atividades Cognitivas</h3>
+        <ul>
+          <li><strong>Leitura:</strong> expanda vocabulário e imaginação</li>
+          <li><strong>Jogos de lógica:</strong> raciocínio e estratégia</li>
+          <li><strong>Programação:</strong> resolução de problemas</li>
+          <li><strong>Xadrez:</strong> planejamento e concentração</li>
+        </ul>
+      </div>
+    </main>
+
+    <main id="tecnologia">
+      <div class="card">
+        <h2>Uso Saudável da Tecnologia</h2>
+        <p class="muted">Como usar a tecnologia de forma benéfica</p>
+    
+        <h3>Estabeleça Limites de Tempo</h3>
+        <p>Defina horários específicos e limitados para uso de telas.</p>
+        <div class="info-note">2 horas por dia para lazer é um bom limite</div>
+    
+        <h3>Apps Educativos e de Organização</h3>
+        <p>Utilize aplicativos que promovam aprendizado, concentração e organização.</p>
+        <ul>
+          <li><strong>Google Keep:</strong> notas rápidas com checklist.</li>
+          <li><strong>Focus To-Do:</strong> combina Pomodoro + listas.</li>
+        </ul>
+        <div class="info-note">Outras opções: Forest, Habitica, Trello Kids, Khan Academy</div>
+    
+        <h3>Zonas Livres de Tecnologia</h3>
+        <p>Estabeleça áreas da casa onde dispositivos não são permitidos, como quartos e mesa de jantar.</p>
+        <div class="info-note">Evitar dispositivos especialmente 1 hora antes de dormir.</div>
+    
+        <h3>Supervisão Ativa</h3>
+        <p>Acompanhar o conteúdo que está sendo consumido e jogue junto quando possível.</p>
+        <div class="info-note">Crie momentos de conexão através da tecnologia.</div>
+      </div>
+    </main>
+
+    <main id="educadores">
+      <div class="card">
+        <h2>Dicas para Educadores</h2>
+        <p>Professores têm papel essencial no progresso acadêmico e emocional da criança.</p>
+        <h3>Boas práticas:</h3>
+        <ul>
+          <li>Sentar o aluno perto do professor.</li>
+          <li>Usar instruções escritas.</li>
+        </ul>
+      </div>
+    </main>
+
+    <main id="tratamentos">
+      <div class="card">
+        <h2>Tratamentos e Opções de Acompanhamento</h2>
+        <p>O tratamento do TDAH é contínuo e deve ser acompanhado por profissionais especializados.</p>
+        
+        <h3>Tratamento Medicamentoso</h3>
+        <p>Medicamentos estimulantes e não-estimulantes podem ajudar a melhorar a concentração e reduzir a impulsividade.</p>
+        <ul>
+          <li>Deve ser prescrito e acompanhado por neurologista ou psiquiatra.</li>
+        </ul>
+    
+        <h3>Terapia Comportamental (TCC)</h3>
+        <p>A Terapia Cognitivo-Comportamental ajuda a desenvolver habilidades de organização, planejamento e controle emocional.</p>
+        <ul>
+          <li>Realizada por psicólogos especializados.</li>
+        </ul>
+    
+        <h3>Coaching de TDAH</h3>
+        <p>Auxilia na criação de metas e estratégias práticas para rotina e estudos.</p>
+    
+        <h3>Intervenções Escolares</h3>
+        <p>Inclui adaptações curriculares e apoio pedagógico especializado.</p>
+    
+        <h3>Suporte Familiar</h3>
+        <p>Orientação parental e terapia familiar são fundamentais para o sucesso do tratamento.</p>
+      </div>
+    </main>
+
+    <main id="alimentacao">
+      <div class="card">
+        <h2>Alimentação e TDAH</h2>
+    
+        <h3>Alimentos Benéficos</h3>
+        <ul>
+          <li>Peixes ricos em ômega-3 (salmão, sardinha).</li>
+          <li>Proteínas magras (frango, ovos, legumes).</li>
+          <li>Frutas e vegetais coloridos.</li>
+          <li>Grãos integrais.</li>
+          <li>Nozes e sementes.</li>
+        </ul>
+    
+        <h3>Evitar ou Reduzir</h3>
+        <ul>
+          <li>Açúcares refinados.</li>
+          <li>Corantes artificiais.</li>
+          <li>Refrigerantes e energéticos.</li>
+          <li>Fast food e ultraprocessados.</li>
+          <li>Cafeína em excesso.</li>
+        </ul>
+    
+        <h3>Dicas Práticas</h3>
+        <ul>
+          <li>Manter horários regulares.</li>
+          <li>Não pular café da manhã.</li>
+          <li>Incluir proteína em todas as refeições.</li>
+          <li>Manter hidratação adequada.</li>
+        </ul>
+      </div>
+    </main>
+
+    <main id="escola">
+      <div class="card">
+        <h2>Adaptações Escolares</h2>
+    
+        <h3>Direitos do Aluno</h3>
+        <p>Alunos com TDAH têm direito a adaptações garantidas pela Lei Brasileira de Inclusão.</p>
+    
+        <h3>Plano Educacional Individualizado (PEI)</h3>
+        <p>Documento que define estratégias específicas para o aluno.</p>
+    
+        <h3>Adaptações Comuns</h3>
+        <ul>
+          <li>Tempo adicional em provas.</li>
+          <li>Provas com menos questões.</li>
+          <li>Uso de tecnologia assistiva.</li>
+          <li>Pausas durante atividades longas.</li>
+          <li>Redução de estímulos visuais.</li>
+          <li>Divisão de tarefas em etapas menores.</li>
+        </ul>
+    
+        <h3>Comunicação Escola-Família</h3>
+        <p>Manter reuniões periódicas ajuda no acompanhamento e progresso.</p>
+      </div>
+    </main>
+
+    <main id="direitos">
+      <div class="card">
+        <h2>Direitos Legais</h2>
+    
+        <h3>Legislação</h3>
+        <ul>
+          <li>Lei Brasileira de Inclusão (Lei 13.146/2015).</li>
+          <li>Lei 14.254/2021 — acompanhamento para TDAH.</li>
+          <li>Estatuto da Criança e do Adolescente (ECA).</li>
+          <li>Lei de Cotas (Lei 8.213/91).</li>
+        </ul>
+    
+        <h3>Benefícios</h3>
+        <ul>
+          <li>Tempo adicional em provas e concursos.</li>
+          <li>Isenção de taxa em concursos públicos.</li>
+          <li>BPC/LOAS em casos severos.</li>
+          <li>Atendimento prioritário.</li>
+        </ul>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

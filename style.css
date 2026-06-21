@@ -1,0 +1,196 @@
+:root {
+    --gold-1: #c8a24a;
+    --gold-2: #e0be3f;
+    --gold-3: #b08a2e;
+    --bg: #0f1221;
+    --card: #141832;
+    --muted: #cbd3e6;
+    --radius: 14px;
+    --max-width: 1000px;
+    --badge-high: #10b981;
+    --badge-medium: #3b82f6;
+  }
+  
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+  }
+  
+  body {
+    background: var(--bg);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--gold-2);
+    color: #0f1221;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  button:hover { 
+    background: var(--gold-3); 
+  }
+  
+  button.secondary {
+    background: transparent;
+    border: 2px solid var(--gold-2);
+    color: var(--gold-2);
+  }
+  
+  button.secondary:hover { 
+    background: var(--gold-2); 
+    color: #0f1221; 
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #fff;
+    color: #333;
+  }
+  
+  #login-screen {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #login-box, #register-box {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .muted { 
+    color: var(--muted); 
+    margin-top: 10px; 
+  }
+  
+  #app {
+    width: 100%;
+    max-width: var(--max-width);
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  nav.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  main { 
+    display: none; 
+  }
+  
+  main.active { 
+    display: block; 
+  }
+  
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  @media(min-width: 768px) {
+    .grid-2 { 
+      grid-template-columns: 1fr 1fr; 
+    }
+  }
+  
+  .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .badge.high { 
+    background: rgba(16, 185, 129, 0.2); 
+    color: #34d399; 
+    border: 1px solid #10b981; 
+  }
+  
+  .badge.medium { 
+    background: rgba(59, 130, 246, 0.2); 
+    color: #60a5fa; 
+    border: 1px solid #3b82f6; 
+  }
+  
+  h2 { 
+    color: var(--gold-2); 
+    margin-bottom: 10px; 
+    border-bottom: 1px solid rgba(224,190,63,0.2); 
+    padding-bottom: 5px; 
+  }
+  
+  h3 { 
+    color: var(--gold-1); 
+    margin: 15px 0 5px 0; 
+  }
+  
+  p { 
+    margin-bottom: 10px; 
+    line-height: 1.5; 
+    color: #f3f4f6; 
+  }
+  
+  ul { 
+    padding-left: 20px; 
+    margin-top: 10px; 
+  }
+  
+  li { 
+    margin-bottom: 6px; 
+    line-height: 1.4; 
+    color: #e5e7eb; 
+  }
+  
+  .info-note {
+    background: rgba(224,190,63,0.1);
+    border-left: 4px solid var(--gold-2);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
